@@ -50,6 +50,7 @@
   },
   "browserslist": "> 2%, not dead",
   "dependencies": {
+    "@tanstack/react-query": "^5.45.1",
     "superagent": "^9.0.2"
   }
 }
