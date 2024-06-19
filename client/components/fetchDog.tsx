@@ -5,14 +5,14 @@ import { fetchDog } from '../APIs/fetchDog.ts'
 export default function Dogs() {
   const { 
     data: dogs,
-    isLoading,
+    isPending,
     error 
   } = useQuery({
     queryKey: ['dogs'],
     queryFn: fetchDog,
   })
   
-  if (isLoading) {
+  if (isPending) {
     return <div>Loading...</div>
   }
 
@@ -23,7 +23,7 @@ export default function Dogs() {
   return (
     <>
       <h2> Dogs </h2>
-      <img src={dogs?.message} alt="dogPicture" />
+      <img src={dogs.message} alt="dogPicture" />
     </>
   )
 }
