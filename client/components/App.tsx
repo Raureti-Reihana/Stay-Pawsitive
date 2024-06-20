@@ -1,4 +1,4 @@
-import Dogs from './fetchDog.tsx'
+import Dogs from './Dogs.tsx'
 
 function App() {
   const refreshPage = () => {
