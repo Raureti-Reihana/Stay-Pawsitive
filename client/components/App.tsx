@@ -1,29 +1,21 @@
 import Dogs from './Dogs.tsx'
+import Comments from './comments.tsx'
+import { useState } from 'react'
+// import Dogs from '../APIs/fetchDog.ts'
 
 function App() {
-  const refreshPage = () => {
-    window.location.reload()
-  }
+  const [currentDog, setCurrentDog] = useState<string>('')
+  const [commentsMap, setCommentsMap] = useState<Record<string, string[]>>({})
 
   return (
     <div>
       <div>Comment something pawsitive about the dog</div>
-      <Dogs />
-      <button
-        onClick={refreshPage}
-        style={{
-          padding: '10px 20px',
-          fontSize: '16px',
-          backgroundColor: '#ff4500',
-          color: 'white',
-          border: 'none',
-          borderRadius: '5px',
-          cursor: 'pointer',
-          marginTop: '20px',
-        }}
-      >
-        Get a New Dog Picture
-      </button>
+      <Dogs currentDog={currentDog} setCurrentDog={setCurrentDog} />
+      <Comments
+        currentDog={currentDog}
+        commentsMap={commentsMap}
+        setCommentsMap={setCommentsMap}
+      />
     </div>
   )
 }
