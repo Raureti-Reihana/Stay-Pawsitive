@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import { fetchDog } from '../APIs/fetchDog.ts'
 import { useState, useEffect } from 'react'
+import { DogsProps } from '../models/fetchDog.ts'
 
 
 export default function Dogs({ setCurrentDog }: DogsProps) {
