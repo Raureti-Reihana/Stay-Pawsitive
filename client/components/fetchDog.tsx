@@ -1,6 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
 import { fetchDog } from '../APIs/fetchDog.ts'
-import { DogsProps, CommentsProps  }  from '../models/fetchDog.ts'
 import { useState, useEffect } from 'react'
 
 
