@@ -2,8 +2,16 @@ import { useQuery } from '@tanstack/react-query'
 import { fetchDog } from '../APIs/fetchDog.ts'
 import { useState, useEffect } from 'react'
 import { DogsProps } from '../models/fetchDog.ts'
+import Comments from './comments.tsx'
+import { useOutletContext } from 'react-router-dom'
 
-export default function Dogs({ setCurrentDog }: DogsProps) {
+export default function Dogs() {
+  const { currentDog, setCurrentDog } = useOutletContext<{
+    currentDog: string
+    setCurrentDog: (dog: string) => void
+  }>()
+  const [commentsMap, setCommentsMap] = useState<Record<string, string[]>>({})
+
   const {
     data: doggies,
     isPending,
@@ -51,6 +59,12 @@ export default function Dogs({ setCurrentDog }: DogsProps) {
         <button onClick={handlePrevious}>Previous</button>
         <button onClick={handleNext}>Next</button>
       </div>
+      <div>Comment something pawsitive about the dog</div>
+      <Comments
+        currentDog={currentDog}
+        commentsMap={commentsMap}
+        setCommentsMap={setCommentsMap}
+      />
     </>
   )
 }
