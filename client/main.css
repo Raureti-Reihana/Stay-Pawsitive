@@ -18,7 +18,7 @@ body {
 
 .dog-img {
   max-width: 100%;
-  height: auto;
+  height: 300px;
   max-height: 500px;
   border-radius: 10px;
   margin: 20px auto;
@@ -193,7 +193,7 @@ main {
 }
 
 .comments-form textarea {
-  height: 100px;
+  height: 60px;
   resize: vertical;
   vertical-align: top;
   overflow-y: auto;

@@ -53,13 +53,19 @@ export default function Dogs() {
 
   return (
     <>
-      <h2 className='dogs-container'> Dogs </h2>
-      <img src={doggies.message[dogIndex]} alt="dogPicture" className='dog-img'/>
+      <h2 className="dogs-container"> Dogs </h2>
+      <img
+        src={doggies.message[dogIndex]}
+        alt="dogPicture"
+        className="dog-img"
+      />
       <div className="dogs-buttons">
         <button onClick={handlePrevious}>Previous</button>
         <button onClick={handleNext}>Next</button>
       </div>
-      <div className='dogs-instruction'>Comment something pawsitive about the dog</div>
+      <div className="dogs-instruction">
+        Comment something pawsitive about the dog
+      </div>
       <Comments
         currentDog={currentDog}
         commentsMap={commentsMap}
