@@ -1,5 +1,22 @@
 body {
-  background-color: #faf8f1;
+  background-color: #87ceeb;
   color: #0a1520;
   font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.spacing {
+  padding: 100px;
 }

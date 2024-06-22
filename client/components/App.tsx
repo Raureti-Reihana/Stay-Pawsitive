@@ -10,7 +10,7 @@ function App() {
   const [commentsMap, setCommentsMap] = useState<Record<string, string[]>>({})
 
   return (
-    <div>
+    <div className="spacing">
       <Header />
       <div>
         <NavBar />
