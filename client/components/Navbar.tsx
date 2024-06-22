@@ -5,10 +5,13 @@ function NavBar() {
     <nav>
       <ul>
         <li>
+          <Link to="/instructions">Instructions</Link>
+        </li>
+        <li>
           <Link to="/Dogs">Check out the dogs</Link>
         </li>
         <li>
-          <Link to="/comments">Leave your feedback</Link>
+          <Link to="/feedback">Leave your feedback</Link>
         </li>
       </ul>
     </nav>

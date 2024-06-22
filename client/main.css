@@ -47,10 +47,9 @@ a:hover {
 
 /* HEADER */
 
-.header {
-}
 .main-title {
   font-size: 90px;
+  margin: 0;
 }
 
 /* FOOTER */
@@ -68,4 +67,12 @@ a:hover {
 
 main {
   flex: 1; /* Take up remaining space between header and footer */
+}
+
+.welcome-title {
+  text-align: center;
+}
+
+.img1 {
+  width: 50%;
 }

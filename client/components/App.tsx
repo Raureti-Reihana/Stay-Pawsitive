@@ -4,6 +4,7 @@ import Header from './Header.tsx'
 import Footer from './Footer.tsx'
 import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
+import Home from './Instructions.tsx'
 
 function App() {
   const [currentDog, setCurrentDog] = useState<string>('')
@@ -11,9 +12,7 @@ function App() {
   return (
     <div className="spacing">
       <Header />
-      <div>
-        <NavBar />
-      </div>
+      <NavBar />
       <Outlet context={{ currentDog, setCurrentDog }} />
       <Footer />
     </div>
