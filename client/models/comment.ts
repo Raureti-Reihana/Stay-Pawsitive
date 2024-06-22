@@ -5,3 +5,7 @@ export interface CommentData {
   email:  string;
   body:   string;
 }
+
+export interface Comment extends CommentData {
+  id: number
+}

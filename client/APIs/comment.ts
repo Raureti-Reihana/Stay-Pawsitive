@@ -4,7 +4,7 @@ import { CommentData } from '../models/comment'
 //Create
 export async function addComment(
   newComment: CommentData,
-): Promise<CommentData> {
+): Promise<Comment> {
   const res = await request
     .post('https://jsonplaceholder.typicode.com/comments')
     .send(newComment)
@@ -12,7 +12,7 @@ export async function addComment(
 }
 
 //Read
-export async function fetchComment(): Promise<CommentData[]> {
+export async function fetchComment(): Promise<Comment[]> {
   const rest = await request.get(
     'https://jsonplaceholder.typicode.com/comments',
   )
@@ -22,8 +22,8 @@ export async function fetchComment(): Promise<CommentData[]> {
 // Update
 
 export async function updateComment(
-  updatedComment: CommentData,
-): Promise<CommentData> {
+  updatedComment: Comment,
+): Promise<Comment> {
   const res = await request
     .patch('https://jsonplaceholder.typicode.com/comments')
     .send(updatedComment)
