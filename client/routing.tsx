@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import App from './components/App';
 import Comments from './components/comments';
 import Dogs from './components/Dogs';
+import Feedback from './components/Feedback';
 
 
 
@@ -24,9 +25,10 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route path="dogs" element={<DogsWrapper />} />
-      <Route path="comments" element={<CommentsWrapper />} />
+      <Route path="comments" element={<Feedback/>} />
       <Route path="index" element={<Navigate to="/" replace />} />
     </Route>
+    
   )
 );
 
