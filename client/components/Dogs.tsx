@@ -3,12 +3,11 @@ import { fetchDog } from '../APIs/fetchDog.ts'
 import { useState, useEffect } from 'react'
 import { DogsProps } from '../models/fetchDog.ts'
 
-
 export default function Dogs({ setCurrentDog }: DogsProps) {
-  const { 
+  const {
     data: doggies,
     isPending,
-    error 
+    error,
   } = useQuery({
     queryKey: ['dogs'],
     queryFn: fetchDog,
@@ -18,9 +17,9 @@ export default function Dogs({ setCurrentDog }: DogsProps) {
 
   useEffect(() => {
     if (doggies && doggies.message) {
-      setCurrentDog(doggies.message[0]); // Set the initial dog
+      setCurrentDog(doggies.message[0]) // Set the initial dog
     }
-  }, [doggies, setCurrentDog]);
+  }, [doggies, setCurrentDog])
 
   if (isPending) {
     return <div>Loading...</div>
@@ -30,20 +29,20 @@ export default function Dogs({ setCurrentDog }: DogsProps) {
     return <div>Something went wrong!</div>
   }
 
-  const dogs = doggies.message 
+  const dogs = doggies.message
 
   const handleNext = () => {
-    const newIndex = (dogIndex + 1) % dogs.length;
-    setDogIndex(newIndex);
-    setCurrentDog(dogs[newIndex]);
+    const newIndex = (dogIndex + 1) % dogs.length
+    setDogIndex(newIndex)
+    setCurrentDog(dogs[newIndex])
   }
 
   const handlePrevious = () => {
-    const newIndex = (dogIndex - 1 + dogs.length) % dogs.length;
-    setDogIndex(newIndex);
-    setCurrentDog(dogs[newIndex]);
-  };
-  
+    const newIndex = (dogIndex - 1 + dogs.length) % dogs.length
+    setDogIndex(newIndex)
+    setCurrentDog(dogs[newIndex])
+  }
+
   return (
     <>
       <h2> Dogs </h2>
