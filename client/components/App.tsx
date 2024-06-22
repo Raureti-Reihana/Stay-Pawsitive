@@ -9,7 +9,7 @@ function App() {
   const [currentDog, setCurrentDog] = useState<string>('')
 
   return (
-    <div>
+    <div className="spacing">
       <Header />
       <div>
         <NavBar />
