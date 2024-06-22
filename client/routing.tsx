@@ -10,9 +10,9 @@ import App from './components/App'
 import Comments from './components/comments'
 import Dogs from './components/Dogs'
 import Feedback from './components/Feedback'
-import Home from './components/Instructions'
 import Instructions from './components/Instructions'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import Home from './components/Home'
 
 const DogsWrapper: React.FC = () => {
   const [currentDog, setCurrentDog] = useState<string>('')
@@ -36,6 +36,7 @@ const CommentsWrapper: React.FC = () => {
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
+      <Route path="/" element={<Home />} />
       <Route path="instructions" element={<Instructions />} />
       <Route path="dogs" element={<DogsWrapper />} />
       <Route path="feedback" element={<Feedback />} />

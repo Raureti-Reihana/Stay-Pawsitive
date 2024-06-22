@@ -11,3 +11,9 @@ export async function fetchDog(): Promise<dogPictures> {
     throw error
   }
 }
+
+export async function fetchMultipleDogs() {
+  const res = await request.get('https://dog.ceo/api/breeds/image/random/12')
+
+  return res.body
+}

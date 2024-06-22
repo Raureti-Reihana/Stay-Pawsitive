@@ -61,7 +61,7 @@ export default function Feedback() {
 
   return (
     <>
-      <h2 className="feedback-tile">How is our website?</h2>
+      <h2 className="feedback-tile">How is our WOOF-site?</h2>
       <form onSubmit={handleSubmit} className="feedback-form">
         <label htmlFor="email">{'Email: '}</label>
         <input
