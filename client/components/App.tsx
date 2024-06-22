@@ -7,7 +7,6 @@ import { Outlet } from 'react-router-dom'
 
 function App() {
   const [currentDog, setCurrentDog] = useState<string>('')
-  const [commentsMap, setCommentsMap] = useState<Record<string, string[]>>({})
 
   return (
     <div>
