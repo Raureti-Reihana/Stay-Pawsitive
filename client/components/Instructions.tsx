@@ -9,10 +9,15 @@ export default function Instructions() {
         {' '}
         Go to 'Check out the dogs'. Comment something "pawsitive" about the dog
         and click submit. Your comment will appear on the page. Click next for
-        the next cute photo of a dog!{' '}
+        the next cute photo of a dog! Or click previous if you want to go back
+        and see the cute dog photo and your comment!{' '}
       </p>
       <h3>STEP TWO: Leave your feedback</h3>
-      <p> Leave us some feedback of the website! We would love to know how we can make your experience better.</p>
+      <p>
+        {' '}
+        Leave us some feedback of the website! We would love to know how we can
+        make your experience better.
+      </p>
     </>
   )
 }

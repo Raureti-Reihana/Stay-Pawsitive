@@ -12,6 +12,7 @@ import Dogs from './components/Dogs'
 import Feedback from './components/Feedback'
 import Home from './components/Instructions'
 import Instructions from './components/Instructions'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
 const DogsWrapper: React.FC = () => {
   const [currentDog, setCurrentDog] = useState<string>('')
