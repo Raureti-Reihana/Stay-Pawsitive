@@ -22,15 +22,15 @@ function Comments({currentDog, commentsMap, setCommentsMap}: CommentsProps) {
   const dogComments = commentsMap[currentDog] || []
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input 
-          type="text" 
+    <div className="comments-container">
+      <form onSubmit={handleSubmit} className="comments-form">
+        <textarea 
+          name="text" 
           value={comment} 
           onChange={(e) => setComment(e.target.value)} 
           placeholder="Pawsitive comment here" 
         />
-        <button type="submit">Submit</button>
+        <button type="submit" className="comment-submit-button">Submit</button>
       </form>
       <div>
         {dogComments.map((cmt, index) => (

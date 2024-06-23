@@ -3,7 +3,7 @@ import { dogPictures } from '../models/fetchDog'
 
 export async function fetchDog(): Promise<dogPictures> {
   try {
-    const res = await request.get(`https://dog.ceo/api/breeds/image/random/5`)
+    const res = await request.get(`https://dog.ceo/api/breeds/image/random`)
 
     return res.body
   } catch (error) {
@@ -12,7 +12,7 @@ export async function fetchDog(): Promise<dogPictures> {
   }
 }
 
-export async function fetchMultipleDogs(): Promise<dogPictures> {
+export async function fetchMultipleDogs() {
   const res = await request.get('https://dog.ceo/api/breeds/image/random/12')
 
   return res.body

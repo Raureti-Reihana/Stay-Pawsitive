@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer>Built by Raureti, Om, Trisha and Christy</footer>
+    <footer className="footer">Coded by Raureti, Om, Trisha and Christy</footer>
   )
 }
 
